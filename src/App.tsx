@@ -34,12 +34,16 @@ function App() {
       <h2>Test JSON</h2>
       <div className="App">
         <Table striped bordered hover size='sm' responsive>
+          <thead>
           <tr><th>Name</th><th>Address</th></tr>
+          </thead>
+          <tbody>
           {data &&
             data.length > 0 &&
             data.map((item: Item) => {
               return <tr><td>{item.name}</td><td>{item.address}</td></tr>;
             })}
+          </tbody>
         </Table>
       </div>
     </Container>
